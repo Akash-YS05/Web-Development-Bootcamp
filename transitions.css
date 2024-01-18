@@ -1,0 +1,36 @@
+.circle {
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+    transition: background-color 1s, border-radius 2s;
+}
+
+.circle:hover {
+    background-color: burlywood;
+    border-radius: 50%;
+}
+
+section div {
+    width: 75px;
+    height: 75px;
+    background-color: cornflowerblue;
+    margin: 15px 0;
+    transition: 1s;
+}
+
+section:hover div {
+    margin-left: 300px;
+}
+
+div:nth-of-type(1) {
+    transition-timing-function: cubic-bezier(0.23, 0, 1.320, 1);
+}
+div:nth-of-type(2) {
+    transition-timing-function: ease-out;
+}
+div:nth-of-type(3) {
+    transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+div:nth-of-type(4) {
+    transition-timing-function: ease-in-out;
+}

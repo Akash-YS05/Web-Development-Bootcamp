@@ -1,0 +1,90 @@
+/* body {
+    border-style: solid;  (looks ugly tho)
+} */   
+
+
+img {
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+}
+
+input[type="text"] {
+    color: blueviolet;
+    
+}
+button {
+    width: 78px;
+    height: 35px;
+    border-top-right-radius: 3cm;
+    border-top-left-radius: 3cm;
+    border-bottom-left-radius: 3cm;
+    border-bottom-right-radius: 3cm;
+}
+
+#signin {
+    border-top-right-radius: 3cm;
+    border-top-left-radius: 3cm;
+    border-bottom-left-radius: 3cm;
+    border-bottom-right-radius: 3cm;      /* 50% makes a circle*/
+}
+
+h2 {
+    color: rgb(5, 98, 98);
+}
+
+footer a {
+    color: teal;
+}
+
+button:hover {
+    background-color: aqua;
+}
+
+* {
+    background-color: cornsilk;
+    color: black;
+}
+
+#but button {
+    text-align: center;
+    width: 90px;
+    height: 40px;
+    font-size: 20px;
+}
+
+#but {
+    text-align: right;
+}
+
+form {
+    text-align: center;
+    padding: 10px;
+}
+
+form button {
+    font-size: 20px;
+}
+
+form input {
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+h1,h4{
+    display: inline; 
+    
+}
+h1:hover {
+    color: rgb(5, 98, 98);
+}
+
+h4:hover {
+    color: rgb(5, 98, 98);
+}
+h2 {
+    width: 790px;
+    border-style: dotted;
+    border-color: black;
+}
+/* border: 4px dotted black;   another way to decalre */

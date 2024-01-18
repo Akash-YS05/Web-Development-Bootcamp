@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+<body>
+    <h1>FORMS DEMO</h1>
+
+
+<button>SUBMIT</button>      <!--by default button is set to submit-->
+    <button type="button"> SUBMIT</button>     <!--Wont submit it anywhere-->
+
+
+    <form action="/nada">
+        <p>
+            <label for="username">Enter the username:</label>
+        <input id="username"type="text" placeholder="username" name="username">         <!--name is what goes to the server-->
+        </p>
+        <p>
+            <label for="color">Whats your fav color?</label>
+        <input id="color"type="color" name="color">
+        </p>
+        <p>
+            <label for="pwd">Enter password:</label>
+        <input id="pwd"type="password" placeholder="password" name="pwd">
+        </p>
+
+    <h2><u>Hiajcking Searches</u></h2>
+    <h3>Google Search</h3>
+    </form>
+
+    <form action="https://www.google.com/search">
+        <p>
+            <label for="google">Search Google</label>
+            <input type="text" id="google" name="q">
+        </p>
+        <button>Search On Google</button>
+    </form>
+        
+    <h3>YouTube Search</h3>
+    <form action="https://www.youtube.com/results">
+        <p>
+            <label for="yt">Search YouTube</label>
+            <input type="text" id="yt" name="search_query">
+        </p>
+        <button>Search on YT</button>      <!--YT videos have specific link so gotta copy a link and submit there-->
+    </form>
+<hr>
+    <form action="/moo">
+        <p>
+            <label for="xxl">XXL</label>
+            <input type="radio" name="size" id="xxl" value="xxl">
+            <label for="xl">XL</label>
+            <input type="radio" name="size" id="xl" value="xl">
+            <label for="l">L</label>
+            <input type="radio" name="size" id="l" value="l">        
+            <button>Submit for Shirt Size</button>
+        </p>
+
+        <p>
+            <label for="poem">Select Any One</label>
+            <select name="poem" id="poem">
+                <option value="">Choose One</option>
+                <option value="inky">Inky</option>
+                <option value="pinky">Pinky</option>      <!--we can add "selected" after value part to make an option pre selected-->
+                <option value="ponky">Ponky</option>
+                <option value="father">Father</option>
+                <option value="donkey">Donkey</option>
+            </select>
+            <button>Submit</button>
+        </p>
+
+        <p>
+            <label for="cute">Cuteness Range</label>
+            <input type="range" name="cute_level" id="cute" min="10" max="100">
+            <button>Submit</button>
+        </p>
+        <!-- For selecting any one box all the options should have the same "name" -->
+
+    </form>
+
+
+
+    <h2>VALIDATION DEMO</h2>
+    <form action="/mooo">
+        <label for="uname">Username</label>
+        <input type="text" name="username" id="uname" minlength="5" maxlength="20" required>
+
+        <label for="em">E-mail</label>
+        <input type="email" name="email" id="em" required>        <!--types like email, url etc have pre set validations-->
+        <button>Submit</button>
+    </form>
+        
+        
+    </form>
+</body>
+</html>
+
+
+
+
+

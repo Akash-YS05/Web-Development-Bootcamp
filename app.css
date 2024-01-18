@@ -1,0 +1,22 @@
+h1 {
+    color : rgb(4, 113, 113);
+    background-color: blanchedalmond;     
+}
+
+/* selector {
+    color:value
+} */
+
+button {
+    color:brown;
+    background-color: #2b4550;
+}
+
+p {
+    color:chocolate;
+    background-color: darkkhaki;
+}
+
+body {
+    background-color:lemonchiffon;
+}
