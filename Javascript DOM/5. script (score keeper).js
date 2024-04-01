@@ -12,23 +12,22 @@ let rounds = 4;
 
 btn1.addEventListener('click', function(){
     if(!isGameOver){
-        score1+=1;
-        
+    player1.textContent++;        
         if (score1===rounds) {
             isGameOver = true;
         }
-        player1.textContent = score1;
+        // player1.textContent = score1;
     }
     
 })
 btn2.addEventListener('click', function() {
     if(!isGameOver){
-        score2+=1;
+        player2.textContent++;        
         
         if (score2===rounds) {
             isGameOver = true;
         }
-        player2.textContent = score2;
+        // player2.textContent = score2;
     }
     
 })
