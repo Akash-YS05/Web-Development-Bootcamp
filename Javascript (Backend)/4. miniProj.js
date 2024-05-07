@@ -25,7 +25,6 @@ const showInfo = (shows) => {
             document.body.append(info)
            
         }
-        
     }
 }
 
