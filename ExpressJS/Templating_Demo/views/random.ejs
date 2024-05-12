@@ -8,6 +8,15 @@
 <body>
     
     <h1> Your random number is : <%= rand %></h1>
+    <!-- <% if (rand % 2 == 0) {%>
+    <h2><%= rand %> is an even number</h2>
+    <% } else {%>
+    <h2><%= rand %> is an odd number</h2>
+    <% } %> -->
+    <h2><%= rand%2==0 ? "Even number" : "Odd number" %></h2>
 
 </body>
 </html>
+
+<!--<%= %> => for embedding a value that will be shown in the webpage-->
+<!--<% %> => for writing logic or anything that controls the flow and is not to be displayed-->
