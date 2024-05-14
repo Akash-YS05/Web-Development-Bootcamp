@@ -45,13 +45,14 @@ app.get('/comments/new', (req, res) => {
 })
 
 app.post('/comments', (req, res) => {
-    //console.log(req.body)
+    console.log(req.body)
     const { username, comment } = req.body
     comments.push({ username, comment, id: uuid() })
     res.redirect('/comments')
 })
 
 app.get('/comments/:id', (req, res) => {
+    console.log(req.body)
     const { id } = req.params
     const comment = comments.find(c => c.id === id)      //find gives the first matching result - array in this case
     res.render('comments/show', { comment })

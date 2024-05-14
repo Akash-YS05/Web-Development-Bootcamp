@@ -1,3 +1,15 @@
 WEBDEV BOOTCAMP STUFF:
 
 1. MOZILLA DEVELOPER NETWORK (FOR HTML TAGS N STUFF)
+2. MONGO SYNTAX
+i. use db - to switch to db
+ii. db.collection.___ - creates collection if none 
+iii. db.collection.insert/insertOne/insertMany - to CREATE
+iv. db.collection.find/findOne/findMany - to READ
+v. db.collection.updateOne/updateMany - to UPDATE
+vi. db.collection.deleteOne/deleteMany - to DELETE
+vii. db.dogs.find({breed: {$nin: ['golden retriever','husky']}}) - not in
+viii. db.dogs.find({breed: {$in: ['golden retriever','husky']}}) - in
+ix. db.dogs.find({age: {$gte: 17}}) - greater than equal
+x. db.dogs.find({age: {$gt: 17}}) - greater than
+xi. db.dogs.find({$or: [{catFriendly: true}, {adopted: false}]}) - or
