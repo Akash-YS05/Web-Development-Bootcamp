@@ -4,10 +4,11 @@ const path = require('path')
 const mongoose = require('mongoose')
 const Product = require('./models/product')
 const {categories} = require('./constants')
+const AppError = require('./AppError')
 
 const methodOverride = require('method-override')
 
-mongoose.connect('mongodb://localhost:27017/farmStand')
+mongoose.connect('mongodb://localhost:27017/farmStand2')
     .then(() => {
         console.log('Mongo Connection open!')
     })
@@ -37,7 +38,8 @@ app.get('/products', async (req, res) => {
 })
 
 app.get('/products/new', (req, res) => {
-    res.render('products/new', {categories})
+    // res.render('products/new', {categories})
+    throw new AppError('Invalid invalid', 401)
 })
 
 app.post('/products',async (req, res) => {
@@ -47,10 +49,13 @@ app.post('/products',async (req, res) => {
     res.redirect(`/products/${newProduct._id}`)
 })
 
-app.get('/products/:id', async (req, res) => {
+app.get('/products/:id', async (req, res, next) => {
     const { id } = req.params
     const product = await Product.findById(id)
-    console.log(product)
+    // console.log(product)
+    if (!product) {
+        next(new AppError('Product not found', 404))
+    }
     res.render('products/details', { product })
 })
 
@@ -70,6 +75,11 @@ app.delete('/products/:id', async (req, res) => {
     const { id } = req.params
     const product = await Product.findByIdAndDelete(id)
     res.redirect('/products')
+})
+
+app.use((err, req, res, next) => {
+    const {status = 500, message = 'ERROR'} = err
+    res.status(status).send(message)
 })
 
 app.listen(3000, () => {
