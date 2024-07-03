@@ -2,6 +2,7 @@
   "dependencies": {
     "axios": "^1.6.8",
     "colors": "^1.4.0",
-    "give-me-a-joke": "^0.5.1"
+    "give-me-a-joke": "^0.5.1",
+    "mongoose": "^8.4.4"
   }
 }

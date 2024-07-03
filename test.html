@@ -9,29 +9,73 @@
     <link rel="stylesheet" href="test.css">
 </head>
 <body>
-    <div id="main">
-        <div id="iphone" class="row justify-content-center">
-            <div id="island" class="col-3">
-                <div></div>
-            </div>
-            <div id="time" class="col-9">
-                <div id="time1">20</div>
-                <div id="time2">35</div>
-            </div>
-        </div> 
-        <div id="back" class="row justify-content-center">
-            <div id="camera">
-                
-                <div id="cam1"></div>
-                <div id="cam2"></div>
-                <div id="cam3"></div>
-            </div>
-            <div id="logo">
-                <img src="" alt="Apple Logo">
-            </div>
-        </div> 
-    </div>
     
+    <section class="banner">
+        <div class="imgbx">
+            <img src="/Museum Of Candy (Bootstrap)/Pictures/gumball.png" alt="first pic" class="active">
+            <img src="/Museum Of Candy (Bootstrap)/Pictures/hand2.png" alt="second pic">
+            <img src="/Museum Of Candy (Bootstrap)/Pictures/lolli_icon.png" alt="third pic">
+            <img src="/Museum Of Candy (Bootstrap)/Pictures/milk.png" alt="fourth pic">
+        </div>
+
+        <div class="contentbx">
+            <div class="active">
+                <h2>Slide Text One</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non hic necessitatibus placeat laudantium incidunt explicabo perferendis quidem voluptatibus, odio corrupti?</p>
+            </div>
+            <div>
+                <h2>Slide Text Two</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non hic necessitatibus placeat laudantium incidunt explicabo perferendis quidem voluptatibus, odio corrupti?</p>
+            </div>
+            <div>
+                <h2>Slide Text Three</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non hic necessitatibus placeat laudantium incidunt explicabo perferendis quidem voluptatibus, odio corrupti?</p>
+            </div>
+            <div>
+                <h2>Slide Text Four</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non hic necessitatibus placeat laudantium incidunt explicabo perferendis quidem voluptatibus, odio corrupti?</p>
+            </div>
+        </div>
+
+        <ul class="controls">
+            <li onclick="prevslide();prevslidetext();"></li>
+            <li onclick="nextslide();nextslidetext()"></li>
+        </ul>
+    </section>
+    
+    <script>
+        const imgbx = document.querySelector('.imgbx')
+        const slides = imgbx.getElementsByTagName('img')
+        var i=0
+
+        function nextslide() {
+            slides[i].classList.remove('active')
+            i=(i+1) % slides.length
+            slides[i].classList.add('active')
+        }
+        function prevslide() {
+            slides[i].classList.remove('active')
+            i=(i-1 + slides.length) % slides.length
+            slides[i].classList.add('active')
+        }
+
+
+
+        const contentbx = document.querySelector('.contentbx')
+        const slidestext = contentbx.getElementsByTagName('div')
+        var j=0
+
+        function nextslidetext() {
+            slidestext[j].classList.remove('active')
+            j=(j+1) % slidestext.length
+            slidestext[j].classList.add('active')
+        }
+        function prevslidetext() {
+            slidestext[j].classList.remove('active')
+            j=(j-1 + slidestext.length) % slidestext.length
+            slidestext[j].classList.add('active')
+        }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

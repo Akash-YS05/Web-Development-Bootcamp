@@ -1,97 +1,101 @@
-#time {
-    font-family: Arial, Helvetica, sans-serif;
+@font-face {
+    font-family: 'ITC';
+    src: url('../adidas/public/adidas/adidas/ITC\ Avant\ Garde\ Gothic\ LT\ Medium.ttf');
+}
+html,body {
+    font-family: 'ITC';
+    overflow: hidden;
+    background-color: blanchedalmond;
+}
+.banner {
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
 }
 
-body {
-    padding: 200px;
-}
-
-#main {
-    display: flex;
-}
-
-#iphone {
-    display: flex;
-    margin: 0 auto;
-    padding-top: 5px;
-    width: 280px;
-    height: 550px;
-    background-color: rgb(35, 35, 35);
-    border-radius: 40px;
-    border: black 7px solid;
-    background-image: linear-gradient(to bottom right, rgb(239, 62, 91),white);
-    box-shadow: 8px 8px 8px rgb(31, 30, 30);
-}
-
-
-#island {
-    margin: 0 auto;
-    width: 120px;
-    height: 32px;
-    background-color: black;
-    margin-top: 5px;
-    border-radius: 40px;
-    flex-wrap: wrap;
-    border: black 2px solid;
-}
-
-#time {
-    margin-bottom: 80%;
-    font-size: 80px;
-    color: white;
-    text-align: center;
-}
-
-#time1 {
-    height: 70px;
-}
-
-#back {
-    display: flex;
-    margin: 0 auto;
-    padding-top: 5px;
-    width: 280px;
-    height: 550px;
-    background-color: rgb(35, 35, 35);
-    border-radius: 40px;
-    border: black 3px solid;
-    background-color: #97cabd;
-    background-image: linear-gradient(to left, grey, black);
-    box-shadow: 8px 8px 8px rgb(31, 30, 30);
-}
-
-#camera {
-    height: 145px;
-    width: 130px;
-    margin-right: 150px;
-    margin-left: 27px;
-    border-radius: 2rem;
-    background-color: white;
-    border: rgb(31, 30, 30) 4px solid;
-    background-color: rgb(70, 70, 70);
-    display: grid;
-    place-items: left;
-    box-shadow: 5px 5px 5px rgb(31, 30, 30);
-}
-
-#cam1, #cam2, #cam3 {
-    height: 45px;
-    width: 45px;
-    background-color: black;
-    border-radius: 50%;
-    box-shadow: 3px 3px 5px rgb(31, 30, 30);
-}
-#cam1 {
-    margin-top: 1px;
-}
-
-#cam2 {
-    margin-left: 60px;
-}
-
-#logo {
+.banner .imgbx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    margin-top: 90px;
-    margin-left: 150px;
-    color: white;
+}
+
+.banner .imgbx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 0.5s;
+    background-position: center;
+}
+.banner .imgbx img.active {
+    opacity: 1;
+}
+.controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 80px;
+}
+
+.controls li {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.controls li:hover {
+    background: #ffeb3b;
+}
+
+.controls li:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid #111;
+    border-bottom: 3px solid #111;
+    transform: rotate(45deg);
+}
+
+.controls li:nth-child(2):before {
+    transform: rotate(225deg);
+}
+
+.contentbx {
+    position: absolute;
+    bottom: 0;
+    max-width: 700px;
+}
+
+.contentbx div {
+    display: none;
+}
+
+.contentbx div.active {
+    display: block;
+    padding-left: 30px;
+    margin-left: 100px;
+    background-color: rgba(0,0,0,0.2);
+}
+.contentbx div h2 {
+    color: #fff;
+    font-size: 2em;
+}
+.contentbx div p {
+    color: #fff;
+    font-size: 1.1em;
+    
+     
 }
