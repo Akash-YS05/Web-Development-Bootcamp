@@ -7,5 +7,16 @@
     "give-me-a-joke": "^0.5.1",
     "method-override": "^3.0.0",
     "mongoose": "^8.5.0"
-  }
+  },
+  "name": "webdev-bootcamp",
+  "version": "1.0.0",
+  "description": "These are my personal practise files for \r  <a href='https://www.udemy.com/share/101W9C3@osrv8adReH4_vRW9U75RNUBBSHquxzQpk0Bgp0lfLqOh_u41bXUsUljojqZ-JcgXhg==/'>The Web Developer Bootcamp by Colt Steele</a>",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
